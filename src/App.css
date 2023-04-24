@@ -1,38 +1,154 @@
-.App {
+/* App.css */
+
+/* Style de l'en-tête */
+.header {
+  margin: 0;
+  font-family:Poppins;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #FFC0CB;
+
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  background-image: linear-gradient(to bottom right, #7a036e, #c894c4, #dba6d4, #a655a1, #f8bff2);
+  color: #fff;
+  padding: 40px;
+  text-align: center;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Style de la photo de profil */
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: -100px;
+}
+
+
+
+/* Style du menu de navigation */
+.navbar {
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar li {
+  display: inline-block;
+  margin: 0 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar a {
+  color: #9b416e; /* Text color */
+  text-decoration: none; /* Remove underline */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Font weight */
+  margin-right: 10px; /* Add right margin for spacing */
+  transition: color 0.3s ease; /* Add transition effect for smooth color change */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar a:hover {
+  color: #dd3bc7; /* Text color on hover */
+}
+
+
+
+/* Style des sections de contenu */
+.section {
+  padding: 60px 0;
+}
+
+.section h2 {
+  margin-bottom: 40px;
+}
+
+.section h3 {
+  margin-top: 0;
+}
+
+/* Style du pied de page */
+.footer {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+}
+
+.profile-img {
+  margin-top: 2px;
+}
+
+
+
+.project-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.project-card {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.project-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.project-school {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.project-competition {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.project-link {
+  font-size: 16px;
+  font-weight: 500;
+  color: #007bff;
+}
+
+@media (min-width: 768px) {
+  .project-card {
+    width: calc(33.33% - 10px);
+    margin-right: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .project-card:last-child {
+    margin-right: 0;
+  }
+
+  .certification-title {
+    color: #9b416e;
   }
 }
